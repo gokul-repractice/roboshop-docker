@@ -38,5 +38,9 @@ services:
     image: cart:1
     depends_on:
     - redis
-    - catalogue  
+    - catalogue
+
+  mysql:
+    image: mysql:1
+    
 
