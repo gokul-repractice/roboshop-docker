@@ -4,10 +4,8 @@ EXPOSE 8080
 USER root
 ENV AMQP_USER=roboshop \
     AMQP_PASS=roboshop123
-
 WORKDIR /app
 COPY requirements.txt /app/
-RUN apk add python3-dev build-base linux-headers pcre-dev
 RUN pip install -r requirements.txt
 COPY *.py /app/
 COPY payment.ini /app/
